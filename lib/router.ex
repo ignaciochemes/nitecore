@@ -18,6 +18,7 @@ defmodule RestApi.Router do
     end
     
     forward "/sha", to: ShaController
+    forward "/sha3", to: Sha3Controller
     forward "/health-check", to: HealthCheckController
 
     match _ do

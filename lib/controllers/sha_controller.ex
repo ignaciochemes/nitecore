@@ -32,13 +32,13 @@ defmodule ShaController do
   post "/sha384" do
     response = SHAService.sha384(conn.body_params["string"], conn.body_params["encoding"])
     conn = put_resp_content_type(conn, "application/json")
-    send_resp(conn, 200, ResponseFormater.create(response))
+    send_resp(conn, :ok, ResponseFormater.create(response))
   end
 
   post "/sha512" do
     response = SHAService.sha512(conn.body_params["string"], conn.body_params["encoding"])
     conn = put_resp_content_type(conn, "application/json")
-    send_resp(conn, 200, ResponseFormater.create(response))
+    send_resp(conn, :ok, ResponseFormater.create(response))
   end
 
   match _ do
