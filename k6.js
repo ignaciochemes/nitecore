@@ -8,8 +8,8 @@ export const options = {
 
 export default function () {
     const res = http.post('http://localhost:8080/sha/sha256', {
-        string: "holaquetal",
-        encoding: "base64"
+        string: "somerandomstring",
+        encoding: "base16"
 
     });
     check(res, { 'status was 200': (r) => r.status == 200 });

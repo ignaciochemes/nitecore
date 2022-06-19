@@ -8,6 +8,15 @@ In this repository you can find a file called `k6.js` for stress and test this a
 
 ---
 
+## HEALTH CHECK
+```js
+url = `http://localhost:8080/health-check`
+```
+
+```sh
+curl --location --request GET 'http://localhost:8080/health-check'
+```
+
 ## SHA DOCUMENTATION
 Body for make request:
 ```json
