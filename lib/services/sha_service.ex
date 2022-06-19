@@ -1,69 +1,41 @@
 defmodule SHAService do
     def sha224(string, encoding) do
         cond do
-            encoding == "base16" ->
-                response = Base.encode16(:crypto.hash(:sha224, string))
-                response
-            encoding == "base32" ->
-                response = Base.encode32(:crypto.hash(:sha224, string))
-                response
-            encoding == "base64" ->
-                response = Base.encode64(:crypto.hash(:sha224, string))
-                response
+            encoding == "base16" -> Base.encode16(:crypto.hash(:sha224, string))
+            encoding == "base32" -> Base.encode32(:crypto.hash(:sha224, string))
+            encoding == "base64" -> Base.encode64(:crypto.hash(:sha224, string))
             encoding != "base16" || encoding != "base32" || encoding != "base64" ->
-                response = "Please specify an correct encoding"
-                response
+                "Please specify an correct encoding. You choose #{encoding}"
         end
     end
 
     def sha256(string, encoding) do
         cond do
-            encoding == "base16" ->
-                response = Base.encode16(:crypto.hash(:sha256, string))
-                response
-            encoding == "base32" ->
-                response = Base.encode32(:crypto.hash(:sha256, string))
-                response
-            encoding == "base64" ->
-                response = Base.encode64(:crypto.hash(:sha256, string))
-                response
+            encoding == "base16" -> Base.encode16(:crypto.hash(:sha256, string))
+            encoding == "base32" -> Base.encode32(:crypto.hash(:sha256, string))
+            encoding == "base64" -> Base.encode64(:crypto.hash(:sha256, string))
             encoding != "base16" || encoding != "base32" || encoding != "base64" ->
-                response = "Please specify an correct encoding"
-                response
+                "Please specify an correct encoding. You choose #{encoding}"
         end
     end
 
     def sha384(string, encoding) do
         cond do
-            encoding == "base16" ->
-                response = Base.encode16(:crypto.hash(:sha384, string))
-                response
-            encoding == "base32" ->
-                response = Base.encode32(:crypto.hash(:sha384, string))
-                response
-            encoding == "base64" ->
-                response = Base.encode64(:crypto.hash(:sha384, string))
-                response
+            encoding == "base16" -> Base.encode16(:crypto.hash(:sha384, string))
+            encoding == "base32" -> Base.encode32(:crypto.hash(:sha384, string))
+            encoding == "base64" -> Base.encode64(:crypto.hash(:sha384, string))
             encoding != "base16" || encoding != "base32" || encoding != "base64" ->
-                response = "Please specify an correct encoding"
-                response
+                "Please specify an correct encoding. You choose #{encoding}"
         end
     end
 
-    def sha512(string, encodig) do
+    def sha512(string, encoding) do
         cond do
-            encodig == "base16" ->
-                response = Base.encode16(:crypto.hash(:sha512, string))
-                response
-            encodig == "base32" ->
-                response = Base.encode32(:crypto.hash(:sha512, string))
-                response
-            encodig == "base64" ->
-                response = Base.encode64(:crypto.hash(:sha512, string))
-                response
-            encodig != "base16" || encodig != "base32" || encodig != "base64" ->
-                response = "Please specify an correct encoding"
-                response
+            encoding == "base16" -> Base.encode16(:crypto.hash(:sha512, string))
+            encoding == "base32" -> Base.encode32(:crypto.hash(:sha512, string))
+            encoding == "base64" -> Base.encode64(:crypto.hash(:sha512, string))
+            encoding != "base16" || encoding != "base32" || encoding != "base64" ->
+                "Please specify an correct encoding. You choose #{encoding}"
         end
     end
 end

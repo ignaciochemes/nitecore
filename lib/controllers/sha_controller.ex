@@ -14,27 +14,23 @@ defmodule ShaController do
   plug(:dispatch)
 
   post "/sha224" do
-    encodig = conn.body_params["encoding"]
-    response = SHAService.sha224(conn.body_params["string"], encodig)
-    send_resp(conn, 200, response)
+    response = SHAService.sha224(conn.body_params["string"], conn.body_params["encoding"])
+    send_resp(conn, 200, ResponseFormater.create(response))
   end
 
   post "/sha256" do
-    encoding = conn.body_params["encoding"]
-    response = SHAService.sha256(conn.body_params["string"], encoding)
-    send_resp(conn, 200, response)
+    response = SHAService.sha256(conn.body_params["string"], conn.body_params["encoding"])
+    send_resp(conn, 200, ResponseFormater.create(response))
   end
 
   post "/sha384" do
-    encoding = conn.body_params["encoding"]
-    response = SHAService.sha384(conn.body_params["string"], encoding)
-    send_resp(conn, 200, response)
+    response = SHAService.sha384(conn.body_params["string"], conn.body_params["encoding"])
+    send_resp(conn, 200, ResponseFormater.create(response))
   end
 
   post "/sha512" do
-    encoding = conn.body_params["encoding"]
-    response = SHAService.sha512(conn.body_params["string"], encoding)
-    send_resp(conn, 200, response)
+    response = SHAService.sha512(conn.body_params["string"], conn.body_params["encoding"])
+    send_resp(conn, 200, ResponseFormater.create(response))
   end
 
 end
