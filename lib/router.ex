@@ -2,7 +2,7 @@ defmodule RestApi.Router do
     use Plug.Router
     use Plug.ErrorHandler
 
-    plug(Plug.Logger)
+    plug(Plug.Logger, log: :notice)
     plug(Plug.Parsers,
         parsers: [:json, :urlencoded],
         pass: ["application/json"],
@@ -20,10 +20,11 @@ defmodule RestApi.Router do
     forward "/sha", to: ShaController
 
     match _ do
-        send_resp(conn, 404, "Not Found")
+        send_resp(conn, :not_found, "Not Found")
     end
 
-    defp handle_errors(conn, %{kind: kind, reason: reason, stack: stack}) do
+    @impl Plug.ErrorHandler
+    def handle_errors(conn, %{kind: kind, reason: reason, stack: stack}) do
         IO.inspect(kind, label: :kind)
         IO.inspect(reason, label: :reason)
         IO.inspect(stack, label: :stack)

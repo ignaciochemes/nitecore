@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "eb6be154-a06d-4826-b882-48212054e372",
+		"name": "Nitecore Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12755540"
+	},
+	"item": [
+		{
+			"name": "SHA",
+			"item": [
+				{
+					"name": "Generate SHA1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha/sha1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha",
+								"sha1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA224",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha/sha224",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha",
+								"sha224"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA256",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha/sha256",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha",
+								"sha256"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA384",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha/sha384",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha",
+								"sha384"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA512",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha/sha512",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha",
+								"sha512"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
