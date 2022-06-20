@@ -1,4 +1,3 @@
 #!/bin/bash
 cd /app
-mix deps.get
-iex -S mix run
+exec mix run --no-halt
