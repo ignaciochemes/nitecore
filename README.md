@@ -11,6 +11,12 @@ In this repository you can find a file called `k6.js` for stress and test this a
 
 ## HEALTH CHECK
 
+Test the production environment with the following command:
+```sh
+curl --location --request GET 'https://api.nitecore.cf/health-check'
+```
+
+Localhost:
 ```js
 url = `http://localhost:8080/health-check`;
 ```
