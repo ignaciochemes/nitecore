@@ -5,7 +5,6 @@ WORKDIR /app
 RUN mix do local.hex --force, local.rebar --force
 
 # Build stage
-ENV MIX_ENV=prod
 
 COPY mix.exs mix.lock ./
 
