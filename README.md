@@ -7,11 +7,13 @@ Written in Elixir offers a lot of security features like: HMAC, RSA, AES, etc. I
 
 In this repository you can find a file called `k6.js` for stress and test this api. Compared to Node.js, this api is x19 faster.
 
+PRODUCTION ENVIRONMENT: `https://api.nitecore.cf/`
+
 ---
 
 ## HEALTH CHECK
 
-Test the production environment with the following command:
+Ping to production environment with the following command:
 ```sh
 curl --location --request GET 'https://api.nitecore.cf/health-check'
 ```
@@ -60,7 +62,8 @@ SHA ALGORITHM:
 -   sha512
 
 ```js
-url = `http://localhost:8080/${SHA_METHOD}/${SHA_ALGORITHM}`;
+NiteCoreUrl = `https://api.nitecore.cf/${SHA_METHOD}/${SHA_ALGORITHM}`;
+localHostUrl = `http://localhost:8080/${SHA_METHOD}/${SHA_ALGORITHM}`;
 ```
 
 Example SHA request:
