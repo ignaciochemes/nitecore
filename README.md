@@ -27,7 +27,7 @@ url = `http://localhost:8080/health-check`;
 curl --location --request GET 'http://localhost:8080/health-check'
 ```
 
-## SHA DOCUMENTATION
+## GENERAL DOCUMENTATION
 
 Body for make request:
 
@@ -48,6 +48,8 @@ Response:
 }
 ```
 
+## SHA DOCUMENTATION
+
 SHA METHOD:
 
 -   sha
@@ -55,7 +57,7 @@ SHA METHOD:
 
 SHA ALGORITHM:
 
--   sha1
+-   sha1 (Not recommended - vulnerabilities found - "SHAttered")
 -   sha224
 -   sha256
 -   sha384
@@ -82,7 +84,44 @@ Example SHA response:
 ```json
 {
     "result": {
-        "data": "949053BE2F233008E6D0D1B2D8657ED11A46332A"
+        "data": "949053be2f233008e6d0d1b2d8657ed11a46332a"
+    }
+}
+```
+
+## BLAKE DOCUMENTATION
+
+BLAKE METHOD:
+
+-   blake
+
+BLAKE ALGORITHM:
+
+-   blake2b
+-   blake2s
+
+```js
+NiteCoreUrl = `https://api.nitecore.cf/${BLAKE_METHOD}/${BLAKE_ALGORITHM}`;
+localHostUrl = `http://localhost:8080/${BLAKE_METHOD}/${BLAKE_ALGORITHM}`;
+```
+
+Example BLAKE request:
+
+```sh
+curl --location --request POST 'http://localhost:8080/blake/blake2b' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "string": "somerandomstring",
+    "encoding": "base32"
+}'
+```
+
+Example BLAKE response:
+
+```json
+{
+    "result": {
+        "data": "kbcftwqioird4li7d4l5viso6dswurhntnfyqdnkebi4qcrw6yu5z47nasklm57ouekkfjjvby5bz24cxar4rik4qelbik3ce4seudi="
     }
 }
 ```

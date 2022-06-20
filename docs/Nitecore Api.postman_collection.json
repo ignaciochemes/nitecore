@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"raw": "{\n    \"string\": \"686F6C6171756574616C\",\n    \"encoding\": \"base16\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -155,6 +155,212 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "SHA 3",
+			"item": [
+				{
+					"name": "Generate SHA224",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha3/sha224",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha3",
+								"sha224"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA256",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha3/sha256",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha3",
+								"sha256"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA384",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://172.17.0.3:8080/sha3/sha384",
+							"protocol": "http",
+							"host": [
+								"172",
+								"17",
+								"0",
+								"3"
+							],
+							"port": "8080",
+							"path": [
+								"sha3",
+								"sha384"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate SHA512",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sha3/sha512",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sha3",
+								"sha512"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blake",
+			"item": [
+				{
+					"name": "Generate Blake2b",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/blake/blake2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"blake",
+								"blake2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Blake2s",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"somerandomstring\",\n    \"encoding\": \"base16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/blake/blake2s",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"blake",
+								"blake2s"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health-check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health-check"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

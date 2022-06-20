@@ -17,9 +17,10 @@ defmodule RestApi.Router do
         send_resp(conn, 200, "#{map}")
     end
     
+    forward "/health-check", to: HealthCheckController
     forward "/sha", to: ShaController
     forward "/sha3", to: Sha3Controller
-    forward "/health-check", to: HealthCheckController
+    forward "/blake", to: BlakeController
 
     match _ do
         send_resp(conn, :not_found, "Not Found")
