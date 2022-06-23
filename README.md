@@ -125,3 +125,39 @@ Example BLAKE response:
     }
 }
 ```
+
+## BASE ENCODE DOCUMENTATION
+
+BASE METHOD:
+
+-   base
+
+BASE ALGORITHM:
+
+-   base32
+-   base64
+
+```js
+NiteCoreUrl = `https://api.nitecore.cf/${BASE_METHOD}/${BASE_ALGORITHM}`;
+localHostUrl = `http://localhost:8080/${BASE_METHOD}/${BASE_ALGORITHM}`;
+```
+
+Example BLAKE request:
+
+```sh
+curl --location --request POST 'http://localhost:8080/base/base32' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "string": "somerandomstring"
+}'
+```
+
+Example BLAKE response:
+
+```json
+{
+    "result": {
+        "data": "onxw2zlsmfxgi33non2he2lom4======"
+    }
+}
+```

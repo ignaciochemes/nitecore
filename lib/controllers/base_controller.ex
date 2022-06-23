@@ -1,4 +1,4 @@
-defmodule BlakeController do
+defmodule BaseController do
     use Plug.Router
     use Plug.ErrorHandler
   
@@ -10,19 +10,19 @@ defmodule BlakeController do
   
     plug(:match)
     plug(:dispatch)
-  
-    post "/blake2b" do
-        response = BlakeService.blake2b(conn.body_params["string"], conn.body_params["encoding"])
+
+    post "/base32" do
+        response = BaseService.base32(conn.body_params["string"])
         conn = put_resp_content_type(conn, "application/json")
         send_resp(conn, :ok, ResponseFormater.create(response))
     end
 
-    post "/blake2s" do
-        response = BlakeService.blake2s(conn.body_params["string"], conn.body_params["encoding"])
+    post "/base64" do
+        response = BaseService.base64(conn.body_params["string"])
         conn = put_resp_content_type(conn, "application/json")
         send_resp(conn, :ok, ResponseFormater.create(response))
     end
-  
+
     @impl Plug.ErrorHandler
     def handle_errors(conn, %{kind: kind, reason: reason, stack: stack}) do
         IO.inspect(kind, label: :kind)

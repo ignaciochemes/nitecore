@@ -21,6 +21,7 @@ defmodule RestApi.Router do
     forward "/sha", to: ShaController
     forward "/sha3", to: Sha3Controller
     forward "/blake", to: BlakeController
+    forward "/base", to: BaseController
 
     match _ do
         send_resp(conn, :not_found, "Not Found")
